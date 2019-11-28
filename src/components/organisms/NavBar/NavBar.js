@@ -2,7 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { routes } from '../../../routes/index';
-
+import ButtonIcon from '../../atoms/ButtonIcon/ButtonIcon';
+import UserAvatar from '../../atoms/UserAvatar/UserAvatar';
+import DeafultUserIcon from '../../../assets/user-solid.svg';
+import DownArrow from '../../../assets/idk.png';
 
 
 
@@ -13,50 +16,64 @@ const Nav = styled.nav`
     width:100%;
   display:flex;
   border-bottom:1px solid #e1e1e1;
-   /* justify-content: space-evenly;  */
+   justify-content: space-evenly; 
+  box-shadow: 0px 0px 10px #e1e1e1;
+
+
 `;
 const ListItem = styled.li`
  list-style:none;
+ margin-right: 30px;
  
 `;
 const StyledLink = styled(NavLink)`
 text-transform: uppercase;
   text-decoration:none;
   font-weight:bold;
+  position: relative;
   &.active {
-    color:#ff801a !important;
-    border-bottom:2px solid #ff801a;
-    border-radius: 1px;
+    color: ${({theme}) => theme.orange} !important;
+
     }
   &:visited {
-    color: black;
+    font-weight:bold;
+    color: ${({theme}) => theme.oneMoreGrey};
+    /* color: #959595; */
     }
-
+    
+    &:after {
+    content: " ";
+    position: absolute;
+    top:6;
+    left:35%;
+    margin-top:4px;
+    display:block;
+    width:20px;
+    
+    border-bottom:2px solid #ff801a;
+  }
 
 `;
 
 
 
 const ListOfNavItem = styled.ul`
-  flex-basis:30%;
+  width:400px;
+  height:60px;
   display: flex;
   justify-content: space-evenly;
-  padding:20px;
+  /* padding:20px; */
   border-left: 1px solid #e1e1e1;
-  height: 100%;
+   align-items:center;
 
+`;
+
+const UserBoxWrapper = styled.div`
+  display:flex;
+   align-items:center;
 
 `;
 
-const UserBox = styled.div`
-
-`;
-const User = styled.div`
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  border: 1px solid black;
-`;
 
 
 
@@ -67,7 +84,7 @@ const NavBar = () => {
     return (
         <Nav>
 
-            <ListOfNavItem>
+              <ListOfNavItem>
                 <ListItem>
                     <StyledLink to={routes.dashboard} > Dashboard</StyledLink>
                 </ListItem>
@@ -78,9 +95,12 @@ const NavBar = () => {
                     <StyledLink to={routes.challenge} > Challenge</StyledLink>
                 </ListItem>
             </ListOfNavItem>
-            <UserBox>
-              <User/>
-            </UserBox>
+            
+            <UserBoxWrapper>
+              <UserAvatar icon={DeafultUserIcon}/>
+              <p>Szymon Nowak</p>
+              <ButtonIcon icon={DownArrow}/>
+            </UserBoxWrapper>
 
 
         </Nav>
