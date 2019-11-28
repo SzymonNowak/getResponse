@@ -1,11 +1,13 @@
 import React from 'react';
-import NavBar from '../components/organisms/NavBar/NavBar';
+import UserPageTemplate from '../templates/UserPageTemplate';
+
 const Dashboard = () => {
     return (
-        <div>
-            <NavBar/>
-          {/* <p>Dashboard</p>   */}
-        </div>
+            <UserPageTemplate>
+            <div>
+                Dash
+            </div>
+        </UserPageTemplate>
     )
 }
 

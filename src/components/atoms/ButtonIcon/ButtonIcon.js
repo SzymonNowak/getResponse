@@ -1,12 +1,6 @@
 import styled from 'styled-components';
 
-
-
-
-
-
 const ButtonIcon = styled.button`
-
 
 display: block;
     width: 20px;
@@ -19,7 +13,6 @@ display: block;
     background-size: 40%;
     border: none;
 `;
-
 
 
 export default ButtonIcon;

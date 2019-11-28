@@ -1,13 +1,14 @@
 import React from 'react';
-import NavBar from '../components/organisms/NavBar/NavBar';
+import UserPageTemplate from '../templates/UserPageTemplate';
+
 
 const Recipes = () => {
     return (
-        <div>
-            <NavBar/>
-
-            Recipes
-        </div>
+              <UserPageTemplate>
+            <div>
+                Recipes
+            </div>
+        </UserPageTemplate>
     )
 }
 

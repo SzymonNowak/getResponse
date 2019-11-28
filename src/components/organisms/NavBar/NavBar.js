@@ -38,7 +38,6 @@ text-transform: uppercase;
   &:visited {
     font-weight:bold;
     color: ${({theme}) => theme.oneMoreGrey};
-    /* color: #959595; */
     }
     
     &:after {
@@ -62,7 +61,6 @@ const ListOfNavItem = styled.ul`
   height:60px;
   display: flex;
   justify-content: space-evenly;
-  /* padding:20px; */
   border-left: 1px solid #e1e1e1;
    align-items:center;
 
