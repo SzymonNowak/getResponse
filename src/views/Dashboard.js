@@ -4,7 +4,7 @@ const Dashboard = () => {
     return (
         <div>
             <NavBar/>
-          <p>Dashboard</p>  
+          {/* <p>Dashboard</p>   */}
         </div>
     )
 }

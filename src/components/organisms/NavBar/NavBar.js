@@ -7,11 +7,13 @@ import { routes } from '../../../routes/index';
 
 
 const Nav = styled.nav`
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
   display:flex;
-  /* justify-content: space-evenly;
-  align-items:baseline;
-  margin:20px; 
-  grid-area: Nav; */
+  border-bottom:1px solid #e1e1e1;
+   /* justify-content: space-evenly;  */
 `;
 const ListItem = styled.li`
  list-style:none;
@@ -35,6 +37,27 @@ text-transform: uppercase;
 
 
 
+const ListOfNavItem = styled.ul`
+  flex-basis:30%;
+  display: flex;
+  justify-content: space-evenly;
+  padding:20px;
+  border-left: 1px solid #e1e1e1;
+  height: 100%;
+
+
+`;
+
+const UserBox = styled.div`
+
+`;
+const User = styled.div`
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border: 1px solid black;
+`;
+
 
 
 
@@ -43,7 +66,8 @@ text-transform: uppercase;
 const NavBar = () => {
     return (
         <Nav>
-            <ul>
+
+            <ListOfNavItem>
                 <ListItem>
                     <StyledLink to={routes.dashboard} > Dashboard</StyledLink>
                 </ListItem>
@@ -53,7 +77,12 @@ const NavBar = () => {
                  <ListItem>
                     <StyledLink to={routes.challenge} > Challenge</StyledLink>
                 </ListItem>
-            </ul>
+            </ListOfNavItem>
+            <UserBox>
+              <User/>
+            </UserBox>
+
+
         </Nav>
     )
 }
