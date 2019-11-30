@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import Box from '../../molecules/InfoBox/Box';
 
 const Wrapper = styled.div`
-    width:1200px;
+    width:100%;
     height:200px;
     display:flex;
-    margin-left:200px;
+    justify-content:center;
+    margin-top:500px;
 `;
 
 

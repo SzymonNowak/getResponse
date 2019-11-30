@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import rightArrow from '../../../assets/rightArrow.svg';
-import IOS from '../../../assets/apple.svg';
-import Android from '../../../assets/andorid.svg';
+import iOS from '../../../assets/IOS.svg';
+import Android from '../../../assets/Android.svg';
+import cos from '../../../assets/apple-brands.svg';
 import Button from '../../atoms/Button/Button';
 import Paragraph from '../../atoms/Paragraph/Paragraph';
 import Header from '../../atoms/Header/Header';
@@ -21,6 +22,11 @@ const StyledButton = styled(Button)`
     margin-top: 20px;
 `;
 
+const StyledParagraph = styled(Paragraph)`
+    margin-left:40px;
+`;
+
+
 
 
 const Box = () => {
@@ -28,18 +34,18 @@ const Box = () => {
         <>
             <Wrapper>
                     <Header>Rouning out of the  <br/> product?</Header>
-                    <Paragraph>Loream ipsum dolor sit amet,conscet <br/>turadipiscing elit. Ineger aliquet</Paragraph>
+                    <StyledParagraph>Loream ipsum dolor sit amet,conscet <br/>turadipiscing elit. Ineger aliquet</StyledParagraph>
                     <StyledButton>Buy now  <img alt="arrow" src={rightArrow}/> </StyledButton>
             </Wrapper>
             <Wrapper leftBorder>
                     <Header>Bod-e Trainer in  <br/> your pocket</Header>
-                    <Paragraph>Loream ipsum dolor sit amet,conscet<br/> turadipiscing elit. Ineger aliquet</Paragraph>
-                    <StyledButton>iOS   <img alt="arrow" src={rightArrow}/>  </StyledButton>
-                    <StyledButton>Android  <img alt="arrow" src={rightArrow}/> </StyledButton>
+                    <StyledParagraph>Loream ipsum dolor sit amet,conscet<br/> turadipiscing elit. Ineger aliquet</StyledParagraph>
+                    <StyledButton><i  class="fab fa-apple" /> IOS   <img alt="arrow" src={rightArrow}/>  </StyledButton>
+                    <StyledButton><i class="fab fa-android"></i> Android  <img alt="arrow" src={rightArrow}/> </StyledButton>
             </Wrapper>
             <Wrapper leftBorder>
                     <Header>Frequently Asked  <br/> Questions</Header>
-                    <Paragraph>Loream ipsum dolor sit amet,conscet <br/>turadipiscing elit. Ineger aliquet</Paragraph>
+                    <StyledParagraph>Loream ipsum dolor sit amet,conscet <br/>turadipiscing elit. Ineger aliquet</StyledParagraph>
                     <StyledButton>Read FAQs  <img alt="arrow" src={rightArrow}/> </StyledButton>
             </Wrapper>
         </>

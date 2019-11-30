@@ -16,8 +16,11 @@ const Nav = styled.nav`
     width:100%;
     display:flex;
     border-bottom:${({theme}) => theme.borders.grey100};
-    justify-content: space-evenly; 
+    /* justify-content: space-evenly;  */
+    justify-content: center; 
+
     box-shadow: 0px 0px 10px #e1e1e1;
+    
 `;
 
 const ListItem = styled.li`
@@ -47,21 +50,26 @@ text-transform: uppercase;
     font-weight:bold;
     color: ${({theme}) => theme.oneMoreGrey};
     }
+    &:hover {
+      color:${({theme}) => theme.green};
+    }
 `;
 
 
 
 const ListOfNavItem = styled.ul`
-  width:400px;
+  width:450px;
   height:60px;
   display: flex;
   justify-content: space-evenly;
   border-left: ${({theme}) => theme.borders.grey100};
- align-items:center;
+  align-items:center;
+ 
 
 `;
 
 const UserBoxWrapper = styled.div`
+margin-left:200px;
   display:flex;
    align-items:center;
 

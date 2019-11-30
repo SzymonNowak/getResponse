@@ -6,9 +6,8 @@ import Paragraph from '../../atoms/Paragraph/Paragraph';
 
 const Wrapper = styled.div`
     display:flex;
-    width:400px;
+    width:300px;
     height:30px;
-    margin-left:400px;
     
 `;
 
@@ -16,7 +15,6 @@ const StyledParagraph = styled(Paragraph)`
 text-transform:uppercase;
 font-size:10px;
 margin-bottom:10px;
-margin-left:400px;
 color: ${({theme}) => theme.routGrey};
 `;
 
@@ -40,8 +38,8 @@ const StyledDot = styled(Dot)`
 
 const DotBox = () => {
     return (
-        <>
-            <StyledParagraph>your x week progress</StyledParagraph>
+        <div>
+                   <StyledParagraph>your x week progress</StyledParagraph>
         <Wrapper>
 
             <StyledDot > 
@@ -88,8 +86,30 @@ const DotBox = () => {
             <StyledDot notActive>
             <WeekInfo>1</WeekInfo>
             </StyledDot>
+            <Line notActive/>
+            <StyledDot notActive>
+            <WeekInfo>1</WeekInfo>
+            </StyledDot>
+            <Line notActive/>
+            <StyledDot notActive>
+            <WeekInfo>1</WeekInfo>
+            </StyledDot>
+            <Line notActive/>
+            <StyledDot notActive>
+            <WeekInfo>1</WeekInfo>
+            </StyledDot>
+            <Line notActive/>
+            <StyledDot notActive>
+            <WeekInfo>1</WeekInfo>
+            </StyledDot>
+            <Line notActive/>
+            <StyledDot notActive>
+            <WeekInfo>1</WeekInfo>
+            </StyledDot>
         </Wrapper>
-        </>
+        </div>
+         
+        
     )
 }
 

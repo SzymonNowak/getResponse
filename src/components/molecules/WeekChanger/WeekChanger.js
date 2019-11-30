@@ -7,10 +7,9 @@ import RightArrow from  '../../../assets/rightArrow.svg';
 const Wrapper = styled.div`
 
     display:flex;
-    width:300px;
+    width:400px;
     height:100px;
-    justify-content:space-between;
-    margin-left:400px;
+    justify-content:space-around;
 `;
 
 const StyledParagraph = styled(Paragraph)`
@@ -27,7 +26,9 @@ const StyledButtonIcon = styled(ButtonIcon)`
     height:50px;
     width:25px;
     &:hover {
-        background-color:${({theme}) => theme.green}
+        background-color:${({theme}) => theme.orange};
+        border: ${({theme}) => theme.borders.orange};
+
     }
 
 `;
