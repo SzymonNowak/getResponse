@@ -33,24 +33,25 @@ text-transform: uppercase;
   position: relative;
   &.active {
     color: ${({theme}) => theme.orange} !important;
-
-    }
-  &:visited {
-    font-weight:bold;
-    color: ${({theme}) => theme.oneMoreGrey};
-    }
-    
     &:after {
     content: " ";
     position: absolute;
     top:6;
     left:35%;
-    margin-top:4px;
+    margin-top:6px;
     display:block;
     width:20px;
     
     border-bottom:2px solid #ff801a;
   }
+    }
+  &:visited  {
+    font-weight:bold;
+    color: ${({theme}) => theme.oneMoreGrey};
+    }
+    
+    
+
 
 `;
 
@@ -73,7 +74,10 @@ const UserBoxWrapper = styled.div`
 `;
 
 
+const StyledParagraph = styled.p`
+    color: ${({theme}) => theme.oneMoreGrey};
 
+`;
 
 
 
@@ -96,7 +100,7 @@ const NavBar = () => {
             
             <UserBoxWrapper>
               <UserAvatar icon={DeafultUserIcon}/>
-              <p>Szymon Nowak</p>
+              <StyledParagraph>Szymon Nowak</StyledParagraph>
               <ButtonIcon icon={DownArrow}/>
             </UserBoxWrapper>
 

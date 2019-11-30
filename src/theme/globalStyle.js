@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        padding-top:120px;
         font-size: 1.6rem;
         font-family: "Arimo", sans-serif;
     }
