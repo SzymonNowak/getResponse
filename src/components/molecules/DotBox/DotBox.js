@@ -88,11 +88,6 @@ const DotBox = () => {
             <StyledDot notActive>
             <WeekInfo>1</WeekInfo>
             </StyledDot>
-
-
-
-
-        
         </Wrapper>
         </>
     )
