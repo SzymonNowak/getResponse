@@ -11,22 +11,6 @@ const Dot = styled.div`
     background-color: ${({ active }) => (active ? 'white !important' : '#b2c200')};
     border:${({ active }) => (active ? '2px solid  #e1e1e1' : 'none')};
     position: relative;
-
-/*     
-    &:after {
-        content: '1';
-        font-size:10px;
-        font-weight:bold;
-        color: #bebebe;
-        position: absolute;
-        top:10px;
-        left:3px;
-        margin-top:6px;
-        display:block;
-    } */
-
-   
-
 `;
 
 

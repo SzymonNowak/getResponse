@@ -5,7 +5,6 @@ import ButtonIcon from '../../atoms/ButtonIcon/ButtonIcon';
 import LeftArrow from   '../../../assets/leftArrow.svg';
 import RightArrow from  '../../../assets/rightArrow.svg';
 const Wrapper = styled.div`
-
     display:flex;
     width:400px;
     height:100px;
@@ -15,7 +14,7 @@ const Wrapper = styled.div`
 const StyledParagraph = styled(Paragraph)`
  color: ${({theme}) => theme.orange};
  font-size:60px;
-margin-left:0px;
+ margin-left:0px;
  margin-top:0px;
 
 `;

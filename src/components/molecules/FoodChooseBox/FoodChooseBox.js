@@ -41,7 +41,6 @@ const FoodChooseBox = () => {
                 <FoodTypeIcon icon={Fish}/>
                 <FoodTypeIcon icon={Hamburger}/>
                 <FoodTypeIcon icon={Pizza}/>
-
             </Wrapper>
         </Cos>
             

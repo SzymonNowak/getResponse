@@ -23,13 +23,11 @@ const MainWrapper = styled.div`
 const TopBar = () => {
     return (
         <MainWrapper>
-                 <BoxWrapper>
-             {/* <FoodChooseBox/>  */}
-
-            <DotBox/>
-            <WeekChanger/> 
-             <FoodChooseBox/> 
-        </BoxWrapper>
+            <BoxWrapper>
+                <DotBox/>
+                <WeekChanger/> 
+                <FoodChooseBox/> 
+            </BoxWrapper>
         </MainWrapper>
        
     )
