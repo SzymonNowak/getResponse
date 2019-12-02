@@ -1,26 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Paragraph from '../Paragraph/Paragraph';
 
 
     const Wrapper = styled.div`
-    /* margin-left:400px; */
-        width:150px;
-        height:1053px;
+        width:110px;
+        height:780px;
         display:flex;
         flex-direction:column;
-        border:1px solid black;
+        text-align: center;
+        vertical-align: middle;
+  
+        background-color:#e3e3e3;
 
     `;
 
     const Cell = styled.div`
-    border-bottom:1px solid black;
-    height:100px;
+    border-bottom: ${({ bottomBorder }) => (bottomBorder ? '3px solid #dddddd' : 'none')};
+    border-top: ${({ topBorder }) => (topBorder ? '3px solid #dddddd' : 'none')};
+    height:60px;
+    line-height: 60px;
+    
     `;
     const SecoundCell = styled.div`
-    
-        border-bottom:1px solid black;
-    height:150px;
+          line-height: 120px;
+        border-bottom: ${({ bottomBorder }) => (bottomBorder ? '3px solid #dddddd' : 'none')};
+        border-top: ${({ topBorder }) => (topBorder ? '3px solid #dddddde' : 'none')};
+
+    height:120px;
+    `;
+
+    const StyledParagraph = styled(Paragraph)`
+        margin-top:0;
     `;
 
 
@@ -30,13 +41,45 @@ const TimeColumn = () => {
     return (
         <Wrapper>
             <Cell> </Cell>
-            <SecoundCell>6AM</SecoundCell>
-            <SecoundCell>9AM</SecoundCell>
-            <SecoundCell>12PM</SecoundCell>
-            <SecoundCell>3PM</SecoundCell>
-            <SecoundCell>6PM</SecoundCell>
+            
+            <SecoundCell bottomBorder>
+                <StyledParagraph>
+                  <b>6:00</b>AM
+                </StyledParagraph>
+            </SecoundCell>
+            
+             <SecoundCell bottomBorder>
+                <StyledParagraph>
+                    <b>9:00</b>AM
+                </StyledParagraph>
+            </SecoundCell>
+            
+             <SecoundCell bottomBorder>
+                <StyledParagraph>
+                    <b>12:00</b>PM
+                </StyledParagraph>
+            </SecoundCell>
+            
+             <SecoundCell bottomBorder>
+                <StyledParagraph >
+                        <b>3:00</b>PM
+                </StyledParagraph>
+            </SecoundCell>
+            
+             <SecoundCell >
+                
+                <StyledParagraph>
+                        <b>6:00</b>PM
+                </StyledParagraph>
+            </SecoundCell>
+         
             <Cell></Cell>
-            <Cell>Workout</Cell>
+
+            <Cell topBorder>
+                  <StyledParagraph>
+                        work
+                </StyledParagraph>
+            </Cell>
 
 
 

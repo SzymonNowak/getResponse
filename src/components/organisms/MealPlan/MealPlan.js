@@ -17,13 +17,13 @@ const MealPlan = () => {
         <Wrapper>
 
         <TimeColumn/>
+        <FoodColumn activeDay/>
+        <FoodColumn />
         <FoodColumn/>
         <FoodColumn/>
         <FoodColumn/>
         <FoodColumn/>
-        <FoodColumn/>
-        <FoodColumn/>
-        <CheatDayColumn/>
+        {/* <CheatDayColumn/> */}
 
 
 

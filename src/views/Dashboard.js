@@ -5,7 +5,7 @@ const Dashboard = () => {
     return (
             <UserPageTemplate>
             <div>
-                Dash
+                {/* Dash */}
             </div>
         </UserPageTemplate>
     )
