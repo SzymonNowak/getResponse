@@ -21,12 +21,12 @@ const MainWrapper = styled.div`
 `;
 
 
-const TopBar = () => {
+const TopBar = ({weekCounter, click}) => {
     return (
         <MainWrapper>
             <BoxWrapper>
                 <DotBox/>
-                <WeekChanger/> 
+                <WeekChanger weekCounter={weekCounter}   childClick={click}/> 
                 <FoodChooseBox/> 
             </BoxWrapper>
         </MainWrapper>

@@ -33,12 +33,16 @@ const StyledButtonIcon = styled(ButtonIcon)`
 `;
 
 
-const WeekChanger = () => {
+const WeekChanger = ({weekCounter, childClick}) => {
+
+
     return (
         <Wrapper>
-            <StyledButtonIcon icon={LeftArrow}/>
-            <StyledParagraph>Week 7</StyledParagraph>
-            <StyledButtonIcon icon={RightArrow}/>
+             { weekCounter !== 1 ? ( <StyledButtonIcon  icon={LeftArrow} onClick={() => childClick(-1)} />) : (<p></p>)}
+           
+    <StyledParagraph>Week {weekCounter}</StyledParagraph>
+            { weekCounter < 4 ? (<StyledButtonIcon icon={RightArrow} pole="1" name="dupa" onClick={() => childClick(1)} />) : (<p></p>)}
+            
         </Wrapper>
     )
 }
