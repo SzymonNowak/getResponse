@@ -44,32 +44,32 @@ const TimeColumn = () => {
             
             <SecoundCell bottomBorder>
                 <StyledParagraph>
-                  <b>6:00</b>AM
+                  <b>6:00</b> <span> AM</span>
                 </StyledParagraph>
             </SecoundCell>
             
              <SecoundCell bottomBorder>
                 <StyledParagraph>
-                    <b>9:00</b>AM
+                    <b>9:00</b> <span> AM</span>
                 </StyledParagraph>
             </SecoundCell>
             
              <SecoundCell bottomBorder>
                 <StyledParagraph>
-                    <b>12:00</b>PM
+                    <b>12:00</b> <span> PM</span>
                 </StyledParagraph>
             </SecoundCell>
             
              <SecoundCell bottomBorder>
                 <StyledParagraph >
-                        <b>3:00</b>PM
+                        <b>3:00</b> <span> PM</span>
                 </StyledParagraph>
             </SecoundCell>
             
              <SecoundCell >
                 
                 <StyledParagraph>
-                        <b>6:00</b>PM
+                        <b>6:00</b> <span> PM</span>
                 </StyledParagraph>
             </SecoundCell>
          
@@ -77,7 +77,7 @@ const TimeColumn = () => {
 
             <Cell topBorder>
                   <StyledParagraph>
-                        work
+                        Workout 
                 </StyledParagraph>
             </Cell>
 
