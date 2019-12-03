@@ -17,7 +17,7 @@ import CheatDayColumn from '../../molecules/CheatDayColumn/CheatDayColumn';
     margin-left:120px;
     `;
 
-const MealCalendar = () =>  {
+const MealCalendar = ({meals}) =>  {
 
 
 
@@ -25,12 +25,19 @@ const MealCalendar = () =>  {
                 <PositionWrapper>
                     <Wrapper>
                         <TimeColumn/>
-                        <FoodColumn Done />
-                        <FoodColumn   activeDay/>
-                        <FoodColumn/>
-                        <FoodColumn/>
-                        <FoodColumn/>
-                        <FoodColumn/> 
+                        {meals.map(item => 
+                            (   
+                                <FoodColumn
+                                    key={item.day}
+                                    day={item.day}
+                                    meals={item.meals}
+                                    quantity={item.quantity}
+                                    isDOne={item.isDOne}
+                                    isToday={item.isToday}
+                                    isGuiltFreeDay={item.isGuiltFreeDay}
+                                />
+                            ))
+                        }
                          <CheatDayColumn/>
                     </Wrapper>
                 </PositionWrapper>

@@ -10,7 +10,7 @@ const Root = () => (
     <BrowserRouter>
       <MainTemplate>
         <Switch>
-                {/* <Route  exact path={routes.home} render={() => <Redirect to="/dashboard" /> }/> */}
+                <Route  exact path={routes.home} render={() => <Redirect to="/dashboard" /> }/>
                 <Route   exact path={routes.dashboard} component={Dashboard}/>
 
 

@@ -63,55 +63,30 @@ import Fit from '../../../assets/fit.png';
 
 
 
-const FoodColumn = ({Done}) => {
+const FoodColumn = ({Done,day,meals,quantity,isDOne,isToday,isGuiltFreeDay}) => {
+
     return (
         <Wrapper  >
            <Cell bottomBorder rightBorder >
                <StyledParagraph Head>
-                        DAY 64
+                        DAY {day}
                </StyledParagraph>
            </Cell>
-           <SecoundCell bottomBorder rightBorder>
-               <StyledParagraph>
-                   Bode Shake
-                   
-               </StyledParagraph>
-             {Done ? (<DoneImg src={Donee} /> ) : ( false) }   
-           </SecoundCell>
-
-           <SecoundCell bottomBorder rightBorder>
-               <StyledParagraph>
-                    Ham and Swiss Roll Ups
-               </StyledParagraph>
-               {Done ? (<DoneImg src={Donee} /> ) : ( false) } 
-
-           </SecoundCell>
-           <SecoundCell bottomBorder rightBorder>
-               <StyledParagraph>
-                    Turkey Melt
-               </StyledParagraph>
-               {Done ? (<DoneImg src={Donee} /> ) : ( false) } 
-
-           </SecoundCell>
-
-           <SecoundCell bottomBorder rightBorder>
-               <StyledParagraph>
-                    Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray
-               </StyledParagraph>
-             {Done ? (<DoneImg src={Donee} /> ) : ( false) } 
-
-           </SecoundCell>
-           <SecoundCell bottomBorder rightBorder>
-               <StyledParagraph>
-                    Turkey Melt
-               </StyledParagraph>
-            {Done ? (<DoneImg src={Donee} /> ) : ( false) } 
-
-           </SecoundCell>
+           {meals.map(item => 
+                            (   
+                                <SecoundCell bottomBorder rightBorder key={item.id}>
+                                    <StyledParagraph>
+                                        {item.name}
+                                        
+                                    </StyledParagraph>
+                                    {isDOne ? (<DoneImg src={Donee} /> ) : ( false) }   
+                                </SecoundCell>
+                            ))
+             }
 
            <SmallerCell >
                 <StyledParagraph>
-                    Low-Carb
+                    {quantity}
                 </StyledParagraph>
            </SmallerCell>
            <SmallerCell topBorder>

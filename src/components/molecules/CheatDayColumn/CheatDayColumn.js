@@ -70,7 +70,7 @@ const CheatDayColumn = () => {
         <Wrapper >
            <Cell bottomBorder  >
                <StyledParagraph Head>
-                        DAY 70
+                        DAY 7
                </StyledParagraph>
            </Cell>
             <FreeSpace>
