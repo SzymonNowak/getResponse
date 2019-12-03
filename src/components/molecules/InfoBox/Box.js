@@ -8,16 +8,17 @@ import Ios from '../../../assets/ios.png';
 import Android from '../../../assets/android.png';
 
 const Wrapper = styled.div`
-
     width:420px;
     height: 220px;
     border-left: ${({ leftBorder }) => (leftBorder ? '1px solid #e1e1e1' : 'none')};
     padding-left:10px;
     padding-right:10px;
-
-    
+    @media (max-width: 768px) {
+      flex-direction:column;
+            border:none;
+            margin-top:40px;
+  }
 `;
-
 
 const StyledButton = styled(Button)`
     margin-left:30px;
@@ -36,9 +37,6 @@ const StyledHeader = styled(Header)`
     margin-top:20px;
     letter-spacing:0.5px;
 `;
-
-
-
 
 const Box = () => {
     return (

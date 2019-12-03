@@ -11,7 +11,6 @@ import Paragraph from '../../atoms/Paragraph/Paragraph';
         text-align: center;
         vertical-align: middle;
         background-color:#e3e3e3;
-
     `;
 
     const Cell = styled.div`
@@ -19,8 +18,8 @@ import Paragraph from '../../atoms/Paragraph/Paragraph';
     border-top: ${({ topBorder }) => (topBorder ? '3px solid #dddddd' : 'none')};
     height:60px;
     line-height: 60px;
-    
     `;
+    
     const BiggerCell = styled.div`
           line-height: 120px;
         border-bottom: ${({ bottomBorder }) => (bottomBorder ? '3px solid #dddddd' : 'none')};
@@ -28,19 +27,16 @@ import Paragraph from '../../atoms/Paragraph/Paragraph';
 
     height:120px;
     `;
+
     const SmallerCell = styled.div`
         height:45px;
         border-top: ${({ topBorder }) => (topBorder ? '1px solid #dddddd' : 'none')};
 
     `;
 
-
     const StyledParagraph = styled(Paragraph)`
         margin-top:0;
     `;
-
-    
-
 
 
 
@@ -87,10 +83,6 @@ const TimeColumn = () => {
                     Workout
                 </StyledParagraph>
             </SmallerCell>
-
-
-
-
         </Wrapper>
     )
 }

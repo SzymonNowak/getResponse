@@ -1,5 +1,4 @@
-import React from 'react';
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 
 
 const Dot = styled.div`
@@ -12,6 +11,5 @@ const Dot = styled.div`
     border:${({ active }) => (active ? '2px solid  #e1e1e1' : 'none')};
     position: relative;
 `;
-
 
 export default Dot

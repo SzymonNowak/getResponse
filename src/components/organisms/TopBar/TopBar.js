@@ -10,6 +10,9 @@ const BoxWrapper = styled.div`
     width:1500px;
     height:100px;
     justify-content:space-around;
+    @media (max-width: 768px) {
+      flex-direction:column;
+  }
 `;
 
 const MainWrapper = styled.div`
@@ -17,7 +20,9 @@ const MainWrapper = styled.div`
     width:100%;
     justify-content:center;
     margin-top:32px;
-
+    @media (max-width: 768px) {
+      flex-direction:column;
+  }
 `;
 
 

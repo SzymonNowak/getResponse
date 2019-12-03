@@ -24,7 +24,7 @@ import Fit from '../../../assets/fit.png';
 
     height:60px;
     `;
-    const SecoundCell = styled.div`
+    const BiggerCell = styled.div`
         position:relative;
         border-bottom: ${({ bottomBorder }) => (bottomBorder ? '3px solid #dddddd' : 'none')};
         border-top: ${({ topBorder }) => (topBorder ? '3px solid #dddddd' : 'none')};
@@ -39,6 +39,7 @@ import Fit from '../../../assets/fit.png';
         font-size:16px;
         color: #959595;
     `;
+
     const StyledHeader = styled(Paragraph)`
          margin-top:0px;
         font-size:30px;
@@ -79,21 +80,22 @@ const FoodColumn = ({Done,day,meals,quantity,isDOne,isToday,isGuiltFreeDay}) => 
            </Cell>
            {meals.map(item => 
                             (   
-                                <SecoundCell bottomBorder rightBorder key={item.id}>
+                                <BiggerCell bottomBorder rightBorder key={item.id}>
                                     <StyledParagraph>
                                         {item.name}
                                         
                                     </StyledParagraph>
                                     {isDOne ? (<DoneImg src={Donee} /> ) : ( false) }   
-                                </SecoundCell>
+                                </BiggerCell>
                             ))
              }
-
+             
            <SmallerCell >
                 <StyledParagraph>
                     {quantity}
                 </StyledParagraph>
            </SmallerCell>
+
            <SmallerCell topBorder>
                 <FitImg src={Fit} />
            </SmallerCell>

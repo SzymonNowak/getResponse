@@ -4,35 +4,34 @@ import Paragraph from '../../atoms/Paragraph/Paragraph';
 import Print from '../../../assets/print.png';
 import Happy from '../../../assets/Happy2.png';
     const Wrapper = styled.div`
-        width:150px;
-        height:750px;
-
-        display:flex;
-        flex-direction:column;
-        border:${({ activeDay }) => (activeDay ? '1px solid #ff801a' : 'nonee')};
-        text-align: center;
-        vertical-align: middle;
+    width:150px;
+    height:750px;
+    display:flex;
+    flex-direction:column;
+    border:${({ activeDay }) => (activeDay ? '1px solid #ff801a' : 'nonee')};
+    text-align: center;
+    vertical-align: middle;
     `;
 
    const Cell = styled.div`
-   position:relative;
+    position:relative;
     border-bottom: ${({ bottomBorder }) => (bottomBorder ? '3px solid #dddddd' : 'none')};
-        border-top: ${({ topBorder }) => (topBorder ? '3px solid #dddddd' : 'none')};
-        border-right: ${({ rightBorder }) => (rightBorder ? '3px solid #dddddd' : 'none')};
-
-        background-color:${({ greyBackground }) => (greyBackground ? '#e3e3e3' : 'white')};
+    border-top: ${({ topBorder }) => (topBorder ? '3px solid #dddddd' : 'none')};
+    border-right: ${({ rightBorder }) => (rightBorder ? '3px solid #dddddd' : 'none')};
+    background-color:${({ greyBackground }) => (greyBackground ? '#e3e3e3' : 'white')};
     line-height: 60px;
-
     height:60px;
     `;
+
     const StyledParagraph = styled(Paragraph)`
-        margin-top:0px;
-        font-size:${({ Head }) => (Head ? '30px' : '16px')};
-        font-weight:${({ Head }) => (Head ? 'bold' : 'none')};
-        color: ${({ Head }) => (Head ? '#b2c200' : '#959595')};
-        display:inline-block;
+    margin-top:0px;
+    font-size:${({ Head }) => (Head ? '30px' : '16px')};
+    font-weight:${({ Head }) => (Head ? 'bold' : 'none')};
+    color: ${({ Head }) => (Head ? '#b2c200' : '#959595')};
+    display:inline-block;
     
     `;
+
     const RotateText = styled.p`
         transform: rotate(-90deg);
         -webkit-transform: rotate(-90deg); 
@@ -64,7 +63,6 @@ import Happy from '../../../assets/Happy2.png';
         background-color:white;
     `;
 
-
 const CheatDayColumn = () => {
     return (
         <Wrapper >
@@ -85,8 +83,6 @@ const CheatDayColumn = () => {
         </Wrapper>
     )
 }
-
-
 
 
 export default CheatDayColumn

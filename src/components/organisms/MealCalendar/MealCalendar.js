@@ -7,6 +7,11 @@ import CheatDayColumn from '../../molecules/CheatDayColumn/CheatDayColumn';
     const Wrapper = styled.div`
     width:1400px;
     display:flex;
+    margin-left:0 !important;
+       @media (max-width: 768px) {
+      margin-top:400px;
+      flex-wrap: wrap;
+     } 
     `;
     
     const PositionWrapper = styled.div`
@@ -15,12 +20,12 @@ import CheatDayColumn from '../../molecules/CheatDayColumn/CheatDayColumn';
     display:flex;
     justify-content:center;
     margin-left:120px;
+     @media (max-width: 768px) {
+    margin-left:55px;
+     }
     `;
 
 const MealCalendar = ({meals}) =>  {
-
-
-
          return (
                 <PositionWrapper>
                     <Wrapper>
@@ -42,7 +47,6 @@ const MealCalendar = ({meals}) =>  {
                     </Wrapper>
                 </PositionWrapper>
                 )
-    
 }
 
 

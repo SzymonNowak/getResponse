@@ -9,6 +9,10 @@ const Wrapper = styled.div`
     width:400px;
     height:100px;
     justify-content:space-around;
+    @media (max-width: 768px) {
+      margin-left:100px;
+      margin-top: 20px;
+  }
 `;
 
 const StyledParagraph = styled(Paragraph)`
@@ -38,11 +42,9 @@ const WeekChanger = ({weekCounter, childClick}) => {
 
     return (
         <Wrapper>
-             { weekCounter !== 1 ? ( <StyledButtonIcon  icon={LeftArrow} onClick={() => childClick(-1)} />) : (<p></p>)}
-           
-    <StyledParagraph>Week {weekCounter}</StyledParagraph>
+            { weekCounter !== 1 ? ( <StyledButtonIcon  icon={LeftArrow} onClick={() => childClick(-1)} />) : (<p></p>)}
+            <StyledParagraph>Week {weekCounter}</StyledParagraph>
             { weekCounter < 4 ? (<StyledButtonIcon icon={RightArrow} pole="1" name="dupa" onClick={() => childClick(1)} />) : (<p></p>)}
-            
         </Wrapper>
     )
 }

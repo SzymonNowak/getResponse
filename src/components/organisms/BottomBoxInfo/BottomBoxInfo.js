@@ -8,12 +8,12 @@ const Wrapper = styled.div`
     display:flex;
     justify-content:center;
     margin-top:30px;
+    @media (max-width: 768px) {
+      flex-direction:column;
+      margin-top:400px;
+      margin-left:120px;
+  }
 `;
-
-
-
-
-
 
 const BottomBoxInfo = () => {
     return(

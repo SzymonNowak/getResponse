@@ -7,13 +7,16 @@ import Food2 from '../../../assets/food2.png';
 import Food3 from '../../../assets/food3.png';
 import Food4 from '../../../assets/food4.png';
 import Food5 from '../../../assets/food5.png';
-import Shape from '../../../assets/shape.png'
-const Wrapper = styled.div`
+import Shape from '../../../assets/shape.png';
 
+const Wrapper = styled.div`
     display:flex;
     width:300px;
     height:30px;
     position:relative;
+    @media (max-width: 768px) {
+      margin-left:150px;
+  }
 `;
 
 const StyledParagraph = styled(Paragraph)`
@@ -21,9 +24,10 @@ const StyledParagraph = styled(Paragraph)`
     margin-left:15px;
     text-transform:uppercase;
     font-size:11px;
-
-
-
+    @media (max-width: 768px) {
+        margin-top:30px;
+        margin-left:200px;
+  }
 `;
 
 const StyledFoodTypeIcon = styled(FoodTypeIcon)`
@@ -37,7 +41,7 @@ const StyledFoodTypeIcon = styled(FoodTypeIcon)`
 const FoodChooseBox = () => {
     return (
         <div>
-                <StyledParagraph>select your protein options</StyledParagraph>
+        <StyledParagraph>select your protein options</StyledParagraph>
             <Wrapper>
                 <FoodTypeIcon icon={Food1}/>
                 <FoodTypeIcon icon={Food2}/>
@@ -45,11 +49,8 @@ const FoodChooseBox = () => {
                 <FoodTypeIcon icon={Food4}/>
                 <FoodTypeIcon icon={Food5}/>
                 <StyledFoodTypeIcon icon={Shape}/>
-
             </Wrapper>
         </div>
-            
-    
     )
 }
 

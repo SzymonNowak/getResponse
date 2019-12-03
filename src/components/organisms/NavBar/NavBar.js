@@ -21,6 +21,9 @@ import DownArrow from '../../../assets/idk.png';
       letter-spacing:1px;
       background-color:white;
       font-size:17px;
+    @media (max-width: 768px) {
+      flex-direction:column;
+  }
   `;
 
   const ListItem = styled.li`
@@ -64,14 +67,24 @@ import DownArrow from '../../../assets/idk.png';
     justify-content: space-evenly;
     border-left: ${({theme}) => theme.borders.grey100};
     align-items:center;
-
-
+      @media (max-width: 768px) {
+      flex-direction:column;
+      height:200px;
+      justify-content: space-evenly;
+      align-items:center;
+      margin-left:80px;
+      border-left:none;
+  }
   `;
 
   const UserBoxWrapper = styled.div`
     margin-left:200px;
     display:flex;
     align-items:center;
+    @media (max-width: 768px) {
+      height:100px;
+      padding-left:0px;
+  }
 
   `;
 

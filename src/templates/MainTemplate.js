@@ -8,16 +8,16 @@ class MainTemplate extends Component {
         
     }
 
-render() {
-      const { children } = this.props;
+    render() {
+        const { children } = this.props;
 
-    return (
-        <div>
-             <GlobalStyle/>
-            <ThemeProvider theme={theme}>{children}</ThemeProvider>
-        </div>
-    )
-}
+        return (
+            <div>
+                <GlobalStyle/>
+                <ThemeProvider theme={theme}>{children}</ThemeProvider>
+            </div>
+        )
+    }
 
 }
 

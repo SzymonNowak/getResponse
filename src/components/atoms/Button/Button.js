@@ -1,6 +1,4 @@
-
 import styled from 'styled-components';
-
 
 const Button = styled.button`
  font-family: "Arimo", sans-serif;
@@ -21,8 +19,5 @@ const Button = styled.button`
     font-weight:bold;
     color: ${({theme}) => theme.white};
     }
-
 `;
-
-
 export default Button;

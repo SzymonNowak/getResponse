@@ -6,26 +6,16 @@ import Recipes from './views/Recipes';
 import MainTemplate from './templates/MainTemplate';
 import { routes } from './routes/index';
 const Root = () => (
-
     <BrowserRouter>
       <MainTemplate>
         <Switch>
                 <Route  exact path={routes.home} render={() => <Redirect to="/dashboard" /> }/>
                 <Route   exact path={routes.dashboard} component={Dashboard}/>
-
-
                 <Route  exact path={routes.challenge} component={Challenge}/>
-
-
                 <Route  exact path={routes.recipes} component={Recipes}/>
-
-
-              </Switch>
+        </Switch>
       </MainTemplate>
-     
-
     </BrowserRouter>
-
 );
 
 export default Root;

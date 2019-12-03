@@ -11,7 +11,6 @@ export const theme = {
      grey100: '1px solid #e1e1e1',
      grey200: '1px solid #bebebe',
      grey300: '1px solid #959595',
-
     },
   };
   

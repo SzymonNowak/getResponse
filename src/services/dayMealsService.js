@@ -1,5 +1,3 @@
-
-
 import { tab } from './index';
 let isProduction = false;
 

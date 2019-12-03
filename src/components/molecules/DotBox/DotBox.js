@@ -9,6 +9,10 @@ const Wrapper = styled.div`
     width:300px;
     height:30px;
     margin-left:110px;
+    @media (max-width: 768px) {
+      margin-left:150px;
+  }
+
 `;
 
 const StyledParagraph = styled(Paragraph)`
@@ -17,6 +21,9 @@ font-size:10px;
 margin-bottom:10px;
 margin-left: 110px;
 color: ${({theme}) => theme.routGrey};
+    @media (max-width: 768px) {
+        margin-left:250px;
+    }
 `;
 
 const WeekInfo = styled.span`
@@ -38,6 +45,9 @@ const StyledDot = styled(Dot)`
 `;
 
 const MainWrapper = styled.div`
+@media (max-width: 768px) {
+      margin-top:500px;
+  }
 
 `;
 
