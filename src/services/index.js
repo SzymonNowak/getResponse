@@ -76,7 +76,7 @@ export const tab = [
         ],
         quantity: "LOW-CARB",
         isDOne: false,
-        isToday: false,
+        isToday: true,
         isGuiltFreeDay: false,
     },
     {

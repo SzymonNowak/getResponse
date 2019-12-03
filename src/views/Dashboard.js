@@ -1,13 +1,17 @@
 import React from 'react';
-import UserPageTemplate from '../templates/UserPageTemplate';
+import NavBar from '../components/organisms/NavBar/NavBar';
+import MealPlan from '../components/organisms/MealPlan/MealPlan';
+import BottomBoxInfo from '../components/organisms/BottomBoxInfo/BottomBoxInfo';
+
+
 
 const Dashboard = () => {
     return (
-            <UserPageTemplate>
-            <div>
-                {/* Dash */}
-            </div>
-        </UserPageTemplate>
+        <>
+            <NavBar/>
+            <MealPlan/>
+            <BottomBoxInfo/>
+        </>
     )
 }
 

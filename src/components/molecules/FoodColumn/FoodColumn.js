@@ -9,7 +9,7 @@ import Fit from '../../../assets/fit.png';
         height:750px;
         display:flex;
         flex-direction:column;
-        border:${({ activeDay }) => (activeDay ? '1px solid #ff801a' : 'none')};
+        border:${({ isToday }) => (isToday ? '1px solid #ff801a' : 'none')};
         text-align: center;
         vertical-align: middle;
     `;
@@ -35,10 +35,15 @@ import Fit from '../../../assets/fit.png';
     `;
 
     const StyledParagraph = styled(Paragraph)`
-        margin-top:${({ Head }) => (Head ? '0px' : '10px')};
-        font-size:${({ Head }) => (Head ? '30px' : '16px')};
-        font-weight:${({ Head }) => (Head ? 'bold' : 'none')};
-        color: ${({ Head }) => (Head ? '#b2c200' : '#959595')};
+        margin-top:10px;
+        font-size:16px;
+        color: #959595;
+    `;
+    const StyledHeader = styled(Paragraph)`
+         margin-top:0px;
+        font-size:30px;
+        font-weight:bold;
+        color: ${({ isToday }) => (isToday ? '#ff801a' : '#b2c200')};
     `;
 
     const DoneImg = styled.img`
@@ -66,11 +71,11 @@ import Fit from '../../../assets/fit.png';
 const FoodColumn = ({Done,day,meals,quantity,isDOne,isToday,isGuiltFreeDay}) => {
 
     return (
-        <Wrapper  >
+        <Wrapper  isToday={isToday} >
            <Cell bottomBorder rightBorder >
-               <StyledParagraph Head>
+               <StyledHeader Head isToday={isToday}>
                         DAY {day}
-               </StyledParagraph>
+               </StyledHeader>
            </Cell>
            {meals.map(item => 
                             (   
