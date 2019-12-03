@@ -4,23 +4,37 @@ import rightArrow from '../../../assets/rightArrow.svg';
 import Button from '../../atoms/Button/Button';
 import Paragraph from '../../atoms/Paragraph/Paragraph';
 import Header from '../../atoms/Header/Header';
+import Ios from '../../../assets/ios.png';
+import Android from '../../../assets/android.png';
+
 const Wrapper = styled.div`
 
-    width:400px;
-    height: 100%;
+    width:420px;
+    height: 220px;
     border-left: ${({ leftBorder }) => (leftBorder ? '1px solid #e1e1e1' : 'none')};
+    padding-left:10px;
+    padding-right:10px;
 
+    
 `;
 
 
 const StyledButton = styled(Button)`
-
-    margin-left:40px;
+    margin-left:30px;
     margin-top: 20px;
 `;
 
 const StyledParagraph = styled(Paragraph)`
-    margin-left:40px;
+    margin-left:30px;
+    font-size:20px;
+    letter-spacing:0.5px;
+`;
+
+const StyledHeader = styled(Header)`
+    font-size:35px;
+    margin-left:30px;
+    margin-top:20px;
+    letter-spacing:0.5px;
 `;
 
 
@@ -30,18 +44,18 @@ const Box = () => {
     return (
         <>
             <Wrapper>
-                    <Header>Rouning out of the  <br/> product?</Header>
+                    <StyledHeader>Rouning out of <br/> product?</StyledHeader>
                     <StyledParagraph>Loream ipsum dolor sit amet,conscet <br/>turadipiscing elit. Ineger aliquet</StyledParagraph>
                     <StyledButton>Buy now  <img alt="arrow" src={rightArrow}/> </StyledButton>
             </Wrapper>
             <Wrapper leftBorder>
-                    <Header>Bod-e Trainer in  <br/> your pocket</Header>
+                    <StyledHeader>Bod-e Trainer in  <br/> your pocket</StyledHeader>
                     <StyledParagraph>Loream ipsum dolor sit amet,conscet<br/> turadipiscing elit. Ineger aliquet</StyledParagraph>
-                    <StyledButton><i  class="fab fa-apple" /> IOS   <img alt="arrow" src={rightArrow}/>  </StyledButton>
-                    <StyledButton><i class="fab fa-android"></i> Android  <img alt="arrow" src={rightArrow}/> </StyledButton>
+                    <StyledButton> <img alt="arrow" src={Ios}/> <span>iOS</span>   <img alt="arrow" src={rightArrow}/>  </StyledButton>
+                    <StyledButton> <img alt="arrow" src={Android}/> <span>Android</span>  <img alt="arrow" src={rightArrow}/> </StyledButton>
             </Wrapper>
             <Wrapper leftBorder>
-                    <Header>Frequently Asked  <br/> Questions</Header>
+                    <StyledHeader>Frequently Asked  <br/> Questions</StyledHeader>
                     <StyledParagraph>Loream ipsum dolor sit amet,conscet <br/>turadipiscing elit. Ineger aliquet</StyledParagraph>
                     <StyledButton>Read FAQs  <img alt="arrow" src={rightArrow}/> </StyledButton>
             </Wrapper>

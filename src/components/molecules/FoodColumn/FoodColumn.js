@@ -1,59 +1,71 @@
 import React from 'react';
 import styled from 'styled-components';
-import Paragraph from '../Paragraph/Paragraph';
-import Done from '../../../assets/done.png';
+import Paragraph from '../../atoms/Paragraph/Paragraph';
+import Donee from '../../../assets/done.png';
 import Fit from '../../../assets/fit.png';
 
     const Wrapper = styled.div`
-        width:150px;
-        height:1053px;
+        width:161px;
+        height:750px;
         display:flex;
         flex-direction:column;
-        border:${({ activeDay }) => (activeDay ? '1px solid #ff801a' : 'nonee')};
+        border:${({ activeDay }) => (activeDay ? '1px solid #ff801a' : 'none')};
         text-align: center;
         vertical-align: middle;
     `;
 
    const Cell = styled.div`
-   position:relative;
-    border-bottom: ${({ bottomBorder }) => (bottomBorder ? '3px solid #dddddd' : 'none')};
-        border-top: ${({ topBorder }) => (topBorder ? '3px solid #dddddd' : 'none')};
-        border-right: ${({ rightBorder }) => (rightBorder ? '3px solid #dddddd' : 'none')};
-
-        background-color:${({ greyBackground }) => (greyBackground ? '#e3e3e3' : 'white')};
-    line-height: 60px;
-
-    height:60px;
-    `;
-    const SecoundCell = styled.div`
-    position:relative;
+        position:relative;
         border-bottom: ${({ bottomBorder }) => (bottomBorder ? '3px solid #dddddd' : 'none')};
         border-top: ${({ topBorder }) => (topBorder ? '3px solid #dddddd' : 'none')};
         border-right: ${({ rightBorder }) => (rightBorder ? '3px solid #dddddd' : 'none')};
         background-color:${({ greyBackground }) => (greyBackground ? '#e3e3e3' : 'white')};
+        line-height: 60px;
 
-    line-height: 30px;
-
-    height:120px;
+    height:60px;
+    `;
+    const SecoundCell = styled.div`
+        position:relative;
+        border-bottom: ${({ bottomBorder }) => (bottomBorder ? '3px solid #dddddd' : 'none')};
+        border-top: ${({ topBorder }) => (topBorder ? '3px solid #dddddd' : 'none')};
+        border-right: ${({ rightBorder }) => (rightBorder ? '3px solid #dddddd' : 'none')};
+        background-color:${({ greyBackground }) => (greyBackground ? '#e3e3e3' : 'white')};
+        line-height: 20px;
+        height:120px;
     `;
 
     const StyledParagraph = styled(Paragraph)`
-        margin-top:0px;
-        font-size:${({ Head }) => (Head ? '25px' : '16px')};
+        margin-top:${({ Head }) => (Head ? '0px' : '10px')};
+        font-size:${({ Head }) => (Head ? '30px' : '16px')};
+        font-weight:${({ Head }) => (Head ? 'bold' : 'none')};
         color: ${({ Head }) => (Head ? '#b2c200' : '#959595')};
     `;
+
     const DoneImg = styled.img`
     position:absolute;
     top:2px;
     left:85%;
-    display:${({ Done }) => (Done ? 'block' : 'none')};
+    display:block;
+    `;
+
+    const SmallerCell = styled.div`
+        height:45px;
+        border-top: ${({ topBorder }) => (topBorder ? '1px solid #dddddd' : 'none')};
+        border-left:1px solid #dddddd;
+        border-right:1px solid #dddddd;
+
+        background-color:#e3e3e3;
+    `;
+
+    const FitImg = styled.img`
+        margin-top:15px;
     `;
 
 
 
-const FoodColumn = () => {
+const FoodColumn = ({Done}) => {
     return (
-        <Wrapper >
+        <Wrapper  >
            <Cell bottomBorder rightBorder >
                <StyledParagraph Head>
                         DAY 64
@@ -64,21 +76,21 @@ const FoodColumn = () => {
                    Bode Shake
                    
                </StyledParagraph>
-               <DoneImg src={Done} Done/>
+             {Done ? (<DoneImg src={Donee} /> ) : ( false) }   
            </SecoundCell>
 
            <SecoundCell bottomBorder rightBorder>
                <StyledParagraph>
                     Ham and Swiss Roll Ups
                </StyledParagraph>
-               <DoneImg src={Done} Done/>
+               {Done ? (<DoneImg src={Donee} /> ) : ( false) } 
 
            </SecoundCell>
            <SecoundCell bottomBorder rightBorder>
                <StyledParagraph>
                     Turkey Melt
                </StyledParagraph>
-               <DoneImg src={Done} Done/>
+               {Done ? (<DoneImg src={Donee} /> ) : ( false) } 
 
            </SecoundCell>
 
@@ -86,32 +98,25 @@ const FoodColumn = () => {
                <StyledParagraph>
                     Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray
                </StyledParagraph>
-               <DoneImg src={Done} Done/>
+             {Done ? (<DoneImg src={Donee} /> ) : ( false) } 
 
            </SecoundCell>
            <SecoundCell bottomBorder rightBorder>
                <StyledParagraph>
                     Turkey Melt
                </StyledParagraph>
-               <DoneImg src={Done} Done/>
+            {Done ? (<DoneImg src={Donee} /> ) : ( false) } 
 
            </SecoundCell>
-            <Cell greyBackground rightBorder>
+
+           <SmallerCell >
                 <StyledParagraph>
                     Low-Carb
                 </StyledParagraph>
-            </Cell>
-            <Cell topBorder greyBackground rightBorder>
-      
-                        <img src={Fit} />
- 
-              
-            </Cell>
-
-
-
-
-
+           </SmallerCell>
+           <SmallerCell topBorder>
+                <FitImg src={Fit} />
+           </SmallerCell>
         </Wrapper>
     )
 }

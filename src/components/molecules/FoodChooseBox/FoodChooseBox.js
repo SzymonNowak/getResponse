@@ -2,30 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 import Paragraph from '../../atoms/Paragraph/Paragraph';
 import FoodTypeIcon from '../../atoms/FoodTypeIcon/FoodTypeIcon';
-import Bread from '../../../assets/bread-slice-solid.svg'
-import Egg from '../../../assets/egg-solid.svg'
-import Fish from '../../../assets/fish-solid.svg'
-import Hamburger from '../../../assets/hamburger-solid.svg'
-import Pizza from '../../../assets/pizza-slice-solid.svg'
-
-const Cos = styled.div`
-
- 
-`;
+import Food1 from '../../../assets/food1.png';
+import Food2 from '../../../assets/food2.png';
+import Food3 from '../../../assets/food3.png';
+import Food4 from '../../../assets/food4.png';
+import Food5 from '../../../assets/food5.png';
 
 const Wrapper = styled.div`
 
     display:flex;
     width:300px;
     height:30px;
-
 `;
 
 const StyledParagraph = styled(Paragraph)`
     margin-top:5px;
     margin-left:15px;
     text-transform:uppercase;
-    font-size:10px;
+    font-size:11px;
 
 
 
@@ -33,16 +27,16 @@ const StyledParagraph = styled(Paragraph)`
 
 const FoodChooseBox = () => {
     return (
-        <Cos>
+        <div>
                 <StyledParagraph>select your protein options</StyledParagraph>
             <Wrapper>
-                <FoodTypeIcon icon={Bread}/>
-                <FoodTypeIcon icon={Egg}/>
-                <FoodTypeIcon icon={Fish}/>
-                <FoodTypeIcon icon={Hamburger}/>
-                <FoodTypeIcon icon={Pizza}/>
+                <FoodTypeIcon icon={Food1}/>
+                <FoodTypeIcon icon={Food2}/>
+                <FoodTypeIcon icon={Food3}/>
+                <FoodTypeIcon icon={Food4}/>
+                <FoodTypeIcon icon={Food5}/>
             </Wrapper>
-        </Cos>
+        </div>
             
     
     )

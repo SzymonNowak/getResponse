@@ -9,11 +9,11 @@ import MealPlan from '../components/organisms/MealPlan/MealPlan';
 
 const UserPageTemplate = ({ children}) => (
   <>
-       {/* <NavBar/> 
+       <NavBar/> 
       <TopBar/>
-    <BottomBoxInfo/>  */}
-
     <MealPlan/>
+
+    <BottomBoxInfo/>  
       {children}
   </> 
  

@@ -16,20 +16,20 @@ const StyledParagraph = styled(Paragraph)`
  font-size:60px;
  margin-left:0px;
  margin-top:0px;
-
 `;
+
 const StyledButtonIcon = styled(ButtonIcon)`
     margin-top:10px;
     border: 1px solid #bebebe;
     border-radius: 5px;
-    height:50px;
-    width:25px;
+    height:54px;
+    width:32px;
+    transition: 0.5s;
     &:hover {
         background-color:${({theme}) => theme.orange};
         border: ${({theme}) => theme.borders.orange};
 
     }
-
 `;
 
 
@@ -37,7 +37,7 @@ const WeekChanger = () => {
     return (
         <Wrapper>
             <StyledButtonIcon icon={LeftArrow}/>
-            <StyledParagraph>Week X</StyledParagraph>
+            <StyledParagraph>Week 7</StyledParagraph>
             <StyledButtonIcon icon={RightArrow}/>
         </Wrapper>
     )

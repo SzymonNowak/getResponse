@@ -8,13 +8,14 @@ const Wrapper = styled.div`
     display:flex;
     width:300px;
     height:30px;
-    
+    margin-left:110px;
 `;
 
 const StyledParagraph = styled(Paragraph)`
 text-transform:uppercase;
 font-size:10px;
 margin-bottom:10px;
+margin-left: 110px;
 color: ${({theme}) => theme.routGrey};
 `;
 
@@ -36,9 +37,14 @@ const StyledDot = styled(Dot)`
 
 `;
 
+const MainWrapper = styled.div`
+
+    /* position:relative; */
+`;
+
 const DotBox = () => {
     return (
-        <div>
+        <MainWrapper>
                    <StyledParagraph>your x week progress</StyledParagraph>
         <Wrapper>
 
@@ -107,7 +113,7 @@ const DotBox = () => {
             <WeekInfo>1</WeekInfo>
             </StyledDot>
         </Wrapper>
-        </div>
+        </MainWrapper>
          
         
     )

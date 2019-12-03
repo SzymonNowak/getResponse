@@ -7,7 +7,7 @@ import WeekChanger from '../../molecules/WeekChanger/WeekChanger';
 const BoxWrapper = styled.div`
 
     display:flex;
-    width:1200px;
+    width:1500px;
     height:100px;
     justify-content:space-around;
 `;
@@ -16,6 +16,7 @@ const MainWrapper = styled.div`
     display:flex;
     width:100%;
     justify-content:center;
+    margin-top:32px;
 
 `;
 
