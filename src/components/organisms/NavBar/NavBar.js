@@ -14,9 +14,9 @@ import DownArrow from '../../../assets/idk.png';
       top:0;
       left:0;
       width:100%;
+      justify-content: space-evenly; 
       display:flex;
       border-bottom:${({theme}) => theme.borders.grey100};
-      justify-content: center; 
       box-shadow: 0px 0px 10px #e1e1e1;
       letter-spacing:1px;
       background-color:white;
@@ -64,7 +64,9 @@ import DownArrow from '../../../assets/idk.png';
     width:450px;
     height:95px;
     display: flex;
+    margin-left:250px;
     justify-content: space-evenly;
+    
     border-left: ${({theme}) => theme.borders.grey100};
     align-items:center;
       @media (max-width: 768px) {
@@ -78,12 +80,13 @@ import DownArrow from '../../../assets/idk.png';
   `;
 
   const UserBoxWrapper = styled.div`
-    margin-left:200px;
+
     display:flex;
     align-items:center;
+
     @media (max-width: 768px) {
       height:100px;
-      padding-left:0px;
+      padding-left:220px;
   }
 
   `;
