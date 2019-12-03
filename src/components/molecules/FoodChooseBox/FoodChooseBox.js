@@ -7,12 +7,13 @@ import Food2 from '../../../assets/food2.png';
 import Food3 from '../../../assets/food3.png';
 import Food4 from '../../../assets/food4.png';
 import Food5 from '../../../assets/food5.png';
-
+import Shape from '../../../assets/shape.png'
 const Wrapper = styled.div`
 
     display:flex;
     width:300px;
     height:30px;
+    position:relative;
 `;
 
 const StyledParagraph = styled(Paragraph)`
@@ -22,6 +23,14 @@ const StyledParagraph = styled(Paragraph)`
     font-size:11px;
 
 
+
+`;
+
+const StyledFoodTypeIcon = styled(FoodTypeIcon)`
+
+    position:absolute;
+    top:0px;
+    left:170px;
 
 `;
 
@@ -35,6 +44,8 @@ const FoodChooseBox = () => {
                 <FoodTypeIcon icon={Food3}/>
                 <FoodTypeIcon icon={Food4}/>
                 <FoodTypeIcon icon={Food5}/>
+                <StyledFoodTypeIcon icon={Shape}/>
+
             </Wrapper>
         </div>
             

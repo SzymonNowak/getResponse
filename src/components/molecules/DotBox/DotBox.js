@@ -39,13 +39,12 @@ const StyledDot = styled(Dot)`
 
 const MainWrapper = styled.div`
 
-    /* position:relative; */
 `;
 
 const DotBox = () => {
     return (
         <MainWrapper>
-                   <StyledParagraph>your x week progress</StyledParagraph>
+                   <StyledParagraph>your 14 week progress</StyledParagraph>
         <Wrapper>
 
             <StyledDot > 
@@ -55,62 +54,62 @@ const DotBox = () => {
 
 
              <StyledDot>
-            <WeekInfo>1</WeekInfo>
+            <WeekInfo>2</WeekInfo>
             </StyledDot>
             <Line />
 
              <StyledDot>
-            <WeekInfo>1</WeekInfo>
+            <WeekInfo>3</WeekInfo>
             </StyledDot>
             <Line/>
 
              <StyledDot>
-            <WeekInfo>1</WeekInfo>
+            <WeekInfo>4</WeekInfo>
             </StyledDot>
             <Line/>
 
              <StyledDot>
-            <WeekInfo>1</WeekInfo>
+            <WeekInfo>5</WeekInfo>
             </StyledDot>
             <Line/>
 
              <StyledDot>
-            <WeekInfo>1</WeekInfo>
+            <WeekInfo>6</WeekInfo>
             </StyledDot>
             <Line notActive/>
 
             <StyledDot>
-            <WeekInfo>1</WeekInfo>
+            <WeekInfo>7</WeekInfo>
             </StyledDot>
             <Line notActive/>
 
             <StyledDot active>
-            <WeekInfo>1</WeekInfo>
+            <WeekInfo>8</WeekInfo>
             </StyledDot>
             <Line notActive/>
 
             <StyledDot notActive>
-            <WeekInfo>1</WeekInfo>
+            <WeekInfo>9</WeekInfo>
             </StyledDot>
             <Line notActive/>
             <StyledDot notActive>
-            <WeekInfo>1</WeekInfo>
+            <WeekInfo>10</WeekInfo>
             </StyledDot>
             <Line notActive/>
             <StyledDot notActive>
-            <WeekInfo>1</WeekInfo>
+            <WeekInfo>11</WeekInfo>
             </StyledDot>
             <Line notActive/>
             <StyledDot notActive>
-            <WeekInfo>1</WeekInfo>
+            <WeekInfo>12</WeekInfo>
             </StyledDot>
             <Line notActive/>
             <StyledDot notActive>
-            <WeekInfo>1</WeekInfo>
+            <WeekInfo>13</WeekInfo>
             </StyledDot>
             <Line notActive/>
             <StyledDot notActive>
-            <WeekInfo>1</WeekInfo>
+            <WeekInfo>14</WeekInfo>
             </StyledDot>
         </Wrapper>
         </MainWrapper>
